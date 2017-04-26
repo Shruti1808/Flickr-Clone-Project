@@ -46,6 +46,8 @@ namespace FlickrClone.Controllers
                 return View();
             }
         }
+
+        //Login User
         public IActionResult Login()
         {
             return View();

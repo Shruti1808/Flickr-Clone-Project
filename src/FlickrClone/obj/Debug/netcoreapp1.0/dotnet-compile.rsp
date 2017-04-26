@@ -1,5 +1,5 @@
---temp-output:C:\Users\epicodus\documents\Visual Studio 2015\Projects\FlickrClone\src\FlickrClone\obj\Debug\netcoreapp1.0\
---out:C:\Users\epicodus\documents\Visual Studio 2015\Projects\FlickrClone\src\FlickrClone\bin\Debug\netcoreapp1.0\FlickrClone.dll
+--temp-output:c:\users\epicodus\documents\visual studio 2015\Projects\FlickrClone\src\FlickrClone\obj\Debug\netcoreapp1.0\
+--out:c:\users\epicodus\documents\visual studio 2015\Projects\FlickrClone\src\FlickrClone\bin\Debug\netcoreapp1.0\FlickrClone.dll
 --define:DEBUG
 --define:TRACE
 --define:NETCOREAPP1_0
@@ -202,16 +202,17 @@
 --reference:C:\Users\epicodus\.nuget\packages\System.Threading.Timer\4.3.0\ref\netstandard1.2\System.Threading.Timer.dll
 --reference:C:\Users\epicodus\.nuget\packages\System.Xml.ReaderWriter\4.3.0\ref\netstandard1.3\System.Xml.ReaderWriter.dll
 --reference:C:\Users\epicodus\.nuget\packages\System.Xml.XDocument\4.3.0\ref\netstandard1.3\System.Xml.XDocument.dll
---resource:"C:\Users\epicodus\documents\Visual Studio 2015\Projects\FlickrClone\src\FlickrClone\obj\Debug\netcoreapp1.0\FlickrClonedotnet-compile.deps.json",FlickrClone.deps.json
-C:\Users\epicodus\documents\Visual Studio 2015\Projects\FlickrClone\src\FlickrClone\Program.cs
-C:\Users\epicodus\documents\Visual Studio 2015\Projects\FlickrClone\src\FlickrClone\Startup.cs
-C:\Users\epicodus\documents\Visual Studio 2015\Projects\FlickrClone\src\FlickrClone\Controllers\AccountController.cs
-C:\Users\epicodus\documents\Visual Studio 2015\Projects\FlickrClone\src\FlickrClone\Controllers\HomeController.cs
-C:\Users\epicodus\documents\Visual Studio 2015\Projects\FlickrClone\src\FlickrClone\Controllers\ImagesController.cs
-C:\Users\epicodus\documents\Visual Studio 2015\Projects\FlickrClone\src\FlickrClone\Migrations\20170426165523_Initial.cs
-C:\Users\epicodus\documents\Visual Studio 2015\Projects\FlickrClone\src\FlickrClone\Migrations\20170426165523_Initial.Designer.cs
-C:\Users\epicodus\documents\Visual Studio 2015\Projects\FlickrClone\src\FlickrClone\Migrations\ApplicationDbContextModelSnapshot.cs
-C:\Users\epicodus\documents\Visual Studio 2015\Projects\FlickrClone\src\FlickrClone\Models\ApplicationDbContext.cs
-C:\Users\epicodus\documents\Visual Studio 2015\Projects\FlickrClone\src\FlickrClone\Models\ApplicationUser.cs
-C:\Users\epicodus\documents\Visual Studio 2015\Projects\FlickrClone\src\FlickrClone\Models\Image.cs
-C:\Users\epicodus\documents\Visual Studio 2015\Projects\FlickrClone\src\FlickrClone\ViewModels\RegisterViewModel.cs
+--resource:"c:\users\epicodus\documents\visual studio 2015\Projects\FlickrClone\src\FlickrClone\obj\Debug\netcoreapp1.0\FlickrClonedotnet-compile.deps.json",FlickrClone.deps.json
+c:\users\epicodus\documents\visual studio 2015\Projects\FlickrClone\src\FlickrClone\Program.cs
+c:\users\epicodus\documents\visual studio 2015\Projects\FlickrClone\src\FlickrClone\Startup.cs
+c:\users\epicodus\documents\visual studio 2015\Projects\FlickrClone\src\FlickrClone\Controllers\AccountController.cs
+c:\users\epicodus\documents\visual studio 2015\Projects\FlickrClone\src\FlickrClone\Controllers\HomeController.cs
+c:\users\epicodus\documents\visual studio 2015\Projects\FlickrClone\src\FlickrClone\Controllers\ImagesController.cs
+c:\users\epicodus\documents\visual studio 2015\Projects\FlickrClone\src\FlickrClone\Migrations\20170426165523_Initial.cs
+c:\users\epicodus\documents\visual studio 2015\Projects\FlickrClone\src\FlickrClone\Migrations\20170426165523_Initial.Designer.cs
+c:\users\epicodus\documents\visual studio 2015\Projects\FlickrClone\src\FlickrClone\Migrations\ApplicationDbContextModelSnapshot.cs
+c:\users\epicodus\documents\visual studio 2015\Projects\FlickrClone\src\FlickrClone\Models\ApplicationDbContext.cs
+c:\users\epicodus\documents\visual studio 2015\Projects\FlickrClone\src\FlickrClone\Models\ApplicationUser.cs
+c:\users\epicodus\documents\visual studio 2015\Projects\FlickrClone\src\FlickrClone\Models\Image.cs
+c:\users\epicodus\documents\visual studio 2015\Projects\FlickrClone\src\FlickrClone\ViewModels\LoginViewModel.cs
+c:\users\epicodus\documents\visual studio 2015\Projects\FlickrClone\src\FlickrClone\ViewModels\RegisterViewModel.cs
