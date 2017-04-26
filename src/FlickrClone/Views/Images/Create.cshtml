@@ -20,6 +20,9 @@
     @Html.LabelFor(m => m.URL)
     @Html.EditorFor(m => m.URL)
 
+    @*@Html.LabelFor(m => m.Today)
+    @Html.TextBox("date", DateTime.Now, new { type = "date" })*@
+
     <input type="submit" value="Create" />
 }
 @Html.ActionLink("Back to list", "Index")

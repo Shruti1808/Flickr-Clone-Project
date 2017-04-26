@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel;
 
 namespace FlickrClone.Models
 {
@@ -14,7 +15,8 @@ namespace FlickrClone.Models
         public string URL { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
-        public DateTime Today { get; }
+
+        public DateTime Today { get; set; } = DateTime.Now;
         public virtual ApplicationUser User { get; set; }
     }
 }

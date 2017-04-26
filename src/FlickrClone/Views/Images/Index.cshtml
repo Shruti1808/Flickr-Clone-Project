@@ -10,12 +10,14 @@
 
     @if (Model.Any())
     {
-        <ul>
+        <div>
             @foreach (var listImage in Model)
             {
-                <li>@Html.DisplayFor(modelImage => listImage.Title)</li>
+                <h2>@Html.DisplayFor(modelImage => listImage.Title)</h2>
+                <h3>@Html.DisplayFor(modelImage => listImage.Description)</h3>
+                <img src="@Html.DisplayFor(modelImage => listImage.URL)" />
             }
-        </ul>
+        </div>
     }
     else
     {
