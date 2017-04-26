@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model FlickrClone.Models.Image
+
+<h2>Add a new image</h2>
+
+<hr />
+
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(m => m.Title)
+    @Html.EditorFor(m => m.Title)
+
+    @Html.LabelFor(m => m.Description)
+    @Html.EditorFor(m => m.Description)
+
+    @Html.LabelFor(m => m.URL)
+    @Html.EditorFor(m => m.URL)
+
+    <input type="submit" value="Create" />
+}
+@Html.ActionLink("Back to list", "Index")

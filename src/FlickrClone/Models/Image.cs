@@ -11,8 +11,10 @@ namespace FlickrClone.Models
     public class Image
     {
         public int ImageId { get; set; }
+        public string URL { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
-        public DateTime Date { get; set; }
+        public DateTime Today { get; }
+        public virtual ApplicationUser User { get; set; }
     }
 }
