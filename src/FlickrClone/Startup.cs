@@ -11,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using FlickrClone.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace FlickrClone
 {
@@ -31,6 +32,12 @@ namespace FlickrClone
             .AddDbContext<FlickrCloneContext>(options =>
             options.UseSqlServer(Configuration["ConnectionStrings:DefaultConnection"]));
 
+            //using identity 
+
+            services.AddIdentity<ApplicationUser, IdentityRole>()
+                .AddEntityFrameworkStores<ApplicationDbContext>()
+                .AddDefaultTokenProviders();
+
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
@@ -41,6 +48,8 @@ namespace FlickrClone
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseIdentity();
 
             app.UseMvc(routes =>
             {

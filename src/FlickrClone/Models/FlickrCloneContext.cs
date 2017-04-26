@@ -10,7 +10,7 @@ namespace FlickrClone.Models
     public class FlickrCloneContext : DbContext
     {
         public virtual DbSet<Image> Images { get; set; }
-        public virtual DbSet<User> Users { get; set; }
+        //public virtual DbSet<User> Users { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {

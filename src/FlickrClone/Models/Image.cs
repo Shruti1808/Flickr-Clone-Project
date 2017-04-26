@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace FlickrClone.Models
 {
@@ -11,6 +13,6 @@ namespace FlickrClone.Models
         public int ImageId { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
-        public DateTime DateTaken { get; set; }
+        public DateTime Date { get; set; }
     }
 }

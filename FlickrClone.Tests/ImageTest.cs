@@ -7,5 +7,7 @@ namespace FlickrClone.Tests
 {
     public class ImageTest
     {
+        [Fact]
+        public void GetTitle
     }
 }
