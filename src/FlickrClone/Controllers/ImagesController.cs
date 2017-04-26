@@ -9,7 +9,7 @@ namespace FlickrClone.Controllers
 {
     public class ImagesController : Controller
     {
-        private FlickrCloneContext db = new FlickrCloneContext();
+        private ApplicationDbContext db = new ApplicationDbContext();
         public IActionResult Index()
         {
             return View(db.Images.ToList());

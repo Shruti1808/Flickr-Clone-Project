@@ -29,7 +29,7 @@ namespace FlickrClone
         {
             services.AddMvc();
             services.AddEntityFramework()
-            .AddDbContext<FlickrCloneContext>(options =>
+            .AddDbContext<ApplicationDbContext>(options =>
             options.UseSqlServer(Configuration["ConnectionStrings:DefaultConnection"]));
 
             //using identity 
