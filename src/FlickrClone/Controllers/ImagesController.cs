@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Authorization;
 using FlickrClone.Models;
 using Microsoft.AspNetCore.Identity;
 using System.Security.Claims;
+using Microsoft.EntityFrameworkCore;
 
 namespace BasicAuthentication.Controllers
 {
@@ -36,6 +37,20 @@ namespace BasicAuthentication.Controllers
             var currentUser = await _userManager.FindByIdAsync(userId);
             image.User = currentUser;
             _db.Images.Add(image);
+            _db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult Edit(int id)
+        {
+            var thisImage = _db.Images.FirstOrDefault(images => images.ImageId == id);
+            return View(thisImage);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(Image image)
+        {
+            _db.Entry(image).State = EntityState.Modified;
             _db.SaveChanges();
             return RedirectToAction("Index");
         }

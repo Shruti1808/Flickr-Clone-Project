@@ -15,7 +15,9 @@
             {
                 <h2>@Html.DisplayFor(modelImage => listImage.Title)</h2>
                 <h3>@Html.DisplayFor(modelImage => listImage.Description)</h3>
+                <h4>Uploaded on @Html.DisplayFor(modelImage => listImage.Today)</h4>
                 <img src="@Html.DisplayFor(modelImage => listImage.URL)" />
+                @Html.ActionLink("Edit This Image", "Edit")
             }
         </div>
     }
