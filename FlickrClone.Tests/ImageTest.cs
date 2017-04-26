@@ -14,12 +14,13 @@ namespace FlickrClone.Tests
         {
             //Arrange
             var image = new Image();
+            image.Description = "This is a sunset";
 
             //Act
             var result = image.Description;
 
             //Assert
-            Assert.Equal("Wash the dog", result);
+            Assert.Equal("This is a sunset", result);
         }
     }
 }
