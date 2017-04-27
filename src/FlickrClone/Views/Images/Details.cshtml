@@ -19,11 +19,20 @@
     @foreach (var listTag in Model.ImageTags)
     {
         <p>@Html.ActionLink((string)@listTag.Tag.Name, "Details", "Tags", new { id = @listTag.Tag.TagId })</p>
-    }
-    
+    }    
 
 <hr />
 <h4>@Html.ActionLink("Edit This Image", "Edit", new { id = Model.ImageId }) |   @Html.ActionLink("Delete", "Delete", new { id = Model.ImageId }) | @Html.ActionLink("Back to List", "Index") | @Html.ActionLink("Add a Tag", "Create", "Tags")</h4>
 </div>
 
 <div class="col-md-3"></div>
+
+@*@foreach (var tag in ViewBag.Tag)
+{
+    <p>@tag.Name</p>
+}*@
+
+
+<div>
+    @Html.Partial("_AddTagPartial")
+</div>

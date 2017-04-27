@@ -1,0 +1,20 @@
+﻿<h2>This is the partial view page!</h2>
+
+@*@model FlickrClone.Models.Tag*@
+
+<h3>Display tag</h3>
+
+@{ 
+    List<SelectListItem> selectList = new List<SelectListItem>();
+    selectList.Add(new SelectListItem { Text = "It Works!" });
+}
+
+@*@foreach (var tag in ViewBag.Tag)
+{
+    <p>@tag.Name</p>
+}*@
+
+@Html.DropDownList("Selection List", ViewBag.Tag as SelectList, "Add a Tag")
+
+<label>Experience</label>
+@*@Html.DropDownList("Tag")*@

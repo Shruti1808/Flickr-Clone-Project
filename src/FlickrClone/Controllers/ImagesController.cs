@@ -6,6 +6,7 @@ using FlickrClone.Models;
 using Microsoft.AspNetCore.Identity;
 using System.Security.Claims;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace BasicAuthentication.Controllers
 {
@@ -23,11 +24,13 @@ namespace BasicAuthentication.Controllers
 
         public IActionResult Index()
         {
+
             return View(_db.Images.ToList());
         }
 
         public IActionResult Create()
         {
+            ViewBag.Tag = new SelectList(_db.Tags, "TagId", "Name");
             return View();
         }
         [HttpPost]
@@ -79,11 +82,15 @@ namespace BasicAuthentication.Controllers
         public IActionResult Details(int id)
         {
             var thisImage = _db.Images.FirstOrDefault(images => images.ImageId == id);
-            ViewBag.Tag = _db.Images
+            ViewBag.CurrentTags = _db.Images
                 .Include(image => image.ImageTags)
                 .ThenInclude(it => it.Tag)
                 .Where(tag => tag.ImageId == id).ToList();
+            ViewBag.Tag = new SelectList(_db.Tags.ToList(), "TagId", "Name");
+
             return View(thisImage);
+
         }
+
     }
 }
