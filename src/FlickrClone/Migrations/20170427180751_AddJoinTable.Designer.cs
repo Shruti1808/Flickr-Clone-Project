@@ -8,9 +8,10 @@ using FlickrClone.Models;
 namespace FlickrClone.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20170427180751_AddJoinTable")]
+    partial class AddJoinTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.0.0-rtm-21431")
@@ -109,11 +110,7 @@ namespace FlickrClone.Migrations
 
                     b.Property<string>("Name");
 
-                    b.Property<string>("UserId");
-
                     b.HasKey("TagId");
-
-                    b.HasIndex("UserId");
 
                     b.ToTable("Tags");
                 });
@@ -243,13 +240,6 @@ namespace FlickrClone.Migrations
                         .WithMany("ImageTags")
                         .HasForeignKey("TagId")
                         .OnDelete(DeleteBehavior.Cascade);
-                });
-
-            modelBuilder.Entity("FlickrClone.Models.Tag", b =>
-                {
-                    b.HasOne("FlickrClone.Models.ApplicationUser", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityRoleClaim<string>", b =>

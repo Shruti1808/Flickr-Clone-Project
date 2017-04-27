@@ -1,0 +1,12 @@
+﻿@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model FlickrClone.Models.Tag
+
+@foreach (var imageTag in Model.ImageTags)
+{
+   <img src="@imageTag.Image.URL"/>
+ 
+}

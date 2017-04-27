@@ -1,0 +1,12 @@
+﻿@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model IEnumerable<FlickrClone.Models.Tag>
+
+@foreach (var listTag in Model)
+    {
+        <a href="@Url.Action("Details", new { id = listTag.TagId })">
+        <h3>@Html.DisplayFor(tag => listTag.Name)</h3></a>
+     }

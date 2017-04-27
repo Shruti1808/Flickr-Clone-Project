@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model FlickrClone.Models.Tag
+
+<h2>Add a new tag</h2>
+
+<hr />
+
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(m => m.Name)
+    @Html.EditorFor(m => m.Name)
+
+
+
+    <input type="submit" value="Create" />
+}

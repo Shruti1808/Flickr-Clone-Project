@@ -11,6 +11,7 @@ namespace FlickrClone.Models
     [Table("Images")]
     public class Image
     {
+        [Key]
         public int ImageId { get; set; }
         public string URL { get; set; }
         public string Title { get; set; }
@@ -18,5 +19,7 @@ namespace FlickrClone.Models
 
         public DateTime Today { get; set; } = DateTime.Now;
         public virtual ApplicationUser User { get; set; }
+
+        public virtual ICollection<ImageTag> ImageTags { get; set; }
     }
 }
