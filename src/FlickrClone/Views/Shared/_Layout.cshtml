@@ -11,13 +11,13 @@
     <nav class="navbar navbar-inverse ">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="#">FLickr</a>
+                <a class="navbar-brand" href="/">Flickr</a>
             </div>
             <ul class="nav navbar-nav nav ">
                 <li class="active"><a href="/">Home</a></li>
-                <li><a href="#">You</a></li>
+                <li><a href="/Images">You</a></li>
                 <li><a href="#">Explore</a></li>
-                <li><a href="">Create</a></li>
+                <li><a href="/Images/Create">Create</a></li>
             </ul>
             <form class="navbar-form navbar-left">
                 <div class="input-group pull-right">
@@ -27,17 +27,29 @@
                             <i class="glyphicon glyphicon-search"></i>
                         </button>
                     </div>
-                    </div>
-                </form>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-                    </ul>
                 </div>
-</nav>
-   
+            </form>
 
-    
+            @if (User.Identity.IsAuthenticated)
+            {
+                @using (Html.BeginForm("LogOff", "Account"))
+                {
+                    <input type="submit" class="btn btn-default pull-right" value="Log out" />
+                }
+            }
+            else
+            {
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/Account/Login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    <li><a href="/Account/Register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                </ul>
+            }
+
+        </div>
+    </nav>
+
+
+
     <div class="container">
         @RenderBody()
     </div>
