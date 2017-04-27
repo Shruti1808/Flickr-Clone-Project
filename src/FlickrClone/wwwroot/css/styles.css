@@ -27,10 +27,14 @@ body {
     transform: scale(1.10);
 }
 
-/*.smallpics {
-    max-height: 250px;
-}*/
-
 .image1 {
     height: 400px;
+}
+
+.imagetag {
+    margin: 5px;
+}
+
+.image-details {
+    text-align: center;
 }

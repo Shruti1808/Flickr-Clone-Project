@@ -5,8 +5,14 @@
 
 @model FlickrClone.Models.Tag
 
+<h2 class="tag-title">@Html.DisplayFor(model => model.Name)</h2>
+
 @foreach (var imageTag in Model.ImageTags)
 {
-   <img src="@imageTag.Image.URL"/>
- 
+    <div class="col-md-4 imagetag">
+        <a href='@Url.Action("Details", "Images", new { id = @imageTag.Image.ImageId })'>
+            <img height="250" src="@imageTag.Image.URL" />
+            </a>
+       
+</div>
 }

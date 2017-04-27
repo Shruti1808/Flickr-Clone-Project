@@ -79,6 +79,10 @@ namespace BasicAuthentication.Controllers
         public IActionResult Details(int id)
         {
             var thisImage = _db.Images.FirstOrDefault(images => images.ImageId == id);
+            ViewBag.Tag = _db.Images
+                .Include(image => image.ImageTags)
+                .ThenInclude(it => it.Tag)
+                .Where(tag => tag.ImageId == id).ToList();
             return View(thisImage);
         }
     }

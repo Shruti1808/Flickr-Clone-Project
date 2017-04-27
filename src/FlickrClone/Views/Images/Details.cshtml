@@ -5,12 +5,25 @@
 
 @model FlickrClone.Models.Image
 
-<h2>Details</h2>
+<br />
+<div class="col-md-3"></div>
+<div class="col-md-6 image-details">
+    <h2>@Html.DisplayFor(model => model.Title)</h2>
+    <hr />
+    <h2>@Html.DisplayFor(model => model.Description)</h2>
+    <h2>@Html.DisplayFor(model => model.Today)</h2>
+    <h4><em>@User.Identity.Name</em></h4>
+    <img width="600" src="@Html.DisplayFor(model => model.URL)" />
+
+    <h3>Tags</h3>
+    @foreach (var listTag in Model.ImageTags)
+    {
+        <p>@Html.ActionLink((string)@listTag.Tag.Name, "Details", "Tags", new { id = @listTag.Tag.TagId })</p>
+    }
+    
+
 <hr />
-<h2>@Html.DisplayFor(model => model.Title)</h2>
-<h2>@Html.DisplayFor(model => model.Description)</h2>
-<h2>@Html.DisplayFor(model => model.Today)</h2>
-<img src="@Html.DisplayFor(model => model.URL)" />
-
-
 <h4>@Html.ActionLink("Edit This Image", "Edit", new { id = Model.ImageId }) |   @Html.ActionLink("Delete", "Delete", new { id = Model.ImageId }) | @Html.ActionLink("Back to List", "Index") | @Html.ActionLink("Add a Tag", "Create", "Tags")</h4>
+</div>
+
+<div class="col-md-3"></div>
