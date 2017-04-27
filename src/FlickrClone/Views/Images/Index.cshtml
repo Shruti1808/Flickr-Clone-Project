@@ -4,7 +4,10 @@
 }
 
 @model IEnumerable<FlickrClone.Models.Image>
-
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
     <h2>Here is your list of images, @User.Identity.Name</h2>
     <hr />
 
@@ -17,7 +20,7 @@
                 <h3>@Html.DisplayFor(modelImage => listImage.Description)</h3>
                 <h4>Uploaded on @Html.DisplayFor(modelImage => listImage.Today)</h4>
                 <img src="@Html.DisplayFor(modelImage => listImage.URL)" />
-                <h4>@Html.ActionLink("Edit This Image", "Edit", new { id = listImage.ImageId }) |                                      @Html.ActionLink("Delete", "Delete", new { id = listImage.ImageId })</h4>
+                <h4>@Html.ActionLink("Edit This Image", "Edit", new { id = listImage.ImageId }) |                                      @Html.ActionLink("Delete", "Delete", new { id = listImage.ImageId }) | @Html.ActionLink("Details", "Details", new { id = listImage.ImageId })</h4>
             }
         </div>
     }

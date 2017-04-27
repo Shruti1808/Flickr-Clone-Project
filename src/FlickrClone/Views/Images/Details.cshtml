@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model FlickrClone.Models.Image
+
+<h2>Details</h2>
+<hr />
+<h2>@Html.DisplayFor(model => model.Title)</h2>
+<h2>@Html.DisplayFor(model => model.Description)</h2>
+<h2>@Html.DisplayFor(model => model.Today)</h2>
+<img src="@Html.DisplayFor(model => model.URL)" />
+
+<p>@Html.ActionLink("Back to List", "Index")</p>
