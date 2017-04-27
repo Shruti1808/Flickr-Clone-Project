@@ -13,15 +13,26 @@
 
     @if (Model.Any())
     {
-        <div>
-            @foreach (var listImage in Model)
-            {
-                <h2>@Html.DisplayFor(modelImage => listImage.Title)</h2>
-                <h3>@Html.DisplayFor(modelImage => listImage.Description)</h3>
-                <h4>Uploaded on @Html.DisplayFor(modelImage => listImage.Today)</h4>
-                <img src="@Html.DisplayFor(modelImage => listImage.URL)" />
-                <h4>@Html.ActionLink("Edit This Image", "Edit", new { id = listImage.ImageId }) |                                      @Html.ActionLink("Delete", "Delete", new { id = listImage.ImageId }) | @Html.ActionLink("Details", "Details", new { id = listImage.ImageId })</h4>
-            }
+        
+        <div class="row">
+            
+                @foreach (var listImage in Model)
+                {
+                    <div class="col-md-4 image1">
+                        <a href="@Url.Action("Details", new { id = listImage.ImageId })">
+                            <div class="thumbnail">
+                                <img src="@Html.DisplayFor(modelImage => listImage.URL)" />
+
+                                <div class="caption">
+                                    <h2>@Html.DisplayFor(modelImage => listImage.Title)</h2>
+                                    <h4>Uploaded on @Html.DisplayFor(modelImage => listImage.Today)</h4>
+                                </div>
+                            </div>
+                            </a>
+</div>
+                }
+                    
+
         </div>
     }
     else
