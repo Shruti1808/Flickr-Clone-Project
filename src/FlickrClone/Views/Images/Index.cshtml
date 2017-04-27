@@ -14,17 +14,17 @@
     @if (Model.Any())
     {
         
-        <div class="row">
+        <div>
             
                 @foreach (var listImage in Model)
                 {
-                    <div class="col-md-4 image1">
+                    <div class="col-sm-4 image1">
                         <a href="@Url.Action("Details", new { id = listImage.ImageId })">
                             <div class="thumbnail">
-                                <img src="@Html.DisplayFor(modelImage => listImage.URL)" />
+                                <img class="smallpics" src="@Html.DisplayFor(modelImage => listImage.URL)" />
 
                                 <div class="caption">
-                                    <h2>@Html.DisplayFor(modelImage => listImage.Title)</h2>
+                                    <h4>@Html.DisplayFor(modelImage => listImage.Title)</h4>
                                     <h4>Uploaded on @Html.DisplayFor(modelImage => listImage.Today)</h4>
                                 </div>
                             </div>
@@ -40,4 +40,4 @@
         <p>No images have been added yet!</p>
     }
 
-    @Html.ActionLink("Create new", "Create")
+    @*@Html.ActionLink("Create new", "Create")*@
