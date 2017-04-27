@@ -17,7 +17,7 @@
                 <h3>@Html.DisplayFor(modelImage => listImage.Description)</h3>
                 <h4>Uploaded on @Html.DisplayFor(modelImage => listImage.Today)</h4>
                 <img src="@Html.DisplayFor(modelImage => listImage.URL)" />
-                @Html.ActionLink("Edit This Image", "Edit", new { id= listImage.ImageId}) | @Html.ActionLink("Delete", "Delete", new { id = listImage.ImageId });
+                <h4>@Html.ActionLink("Edit This Image", "Edit", new { id = listImage.ImageId }) |                                      @Html.ActionLink("Delete", "Delete", new { id = listImage.ImageId })</h4>
             }
         </div>
     }
