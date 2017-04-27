@@ -41,6 +41,8 @@ namespace BasicAuthentication.Controllers
             return RedirectToAction("Index");
         }
 
+        ////Edit an Image
+
         public IActionResult Edit(int id)
         {
             var thisImage = _db.Images.FirstOrDefault(images => images.ImageId == id);
@@ -51,6 +53,23 @@ namespace BasicAuthentication.Controllers
         public IActionResult Edit(Image image)
         {
             _db.Entry(image).State = EntityState.Modified;
+            _db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        ////Delete an Image
+
+        public IActionResult Delete(int id)
+        {
+            var thisImage = _db.Images.FirstOrDefault(images => images.ImageId == id);
+            return View(thisImage);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        public IActionResult DeleteConfirmed(int id)
+        {
+            var thisItem = _db.Images.FirstOrDefault(items => items.ImageId == id);
+            _db.Images.Remove(thisItem);
             _db.SaveChanges();
             return RedirectToAction("Index");
         }
